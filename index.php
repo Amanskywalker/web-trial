@@ -4,6 +4,14 @@
       include 'core.php';
       include 'head.part.php';
       include 'nav.part.php';
-      include 'form.part.php';
+      if (file_exists ("config.php"))
+      {
+        include 'config.php';
+        
+      }
+      else
+      {
+        include 'fill.form.php';
+      }
       include 'footer.part.php';
  ?>
