@@ -4,7 +4,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">I am having trouble, connecting to database. Can you help me out?</div>
                 <div class="panel-body">
-                  <form class="form-horizontal" role="form" method="POST" action="add" enctype="multipart/form-data">
+                  <form class="form-horizontal" role="form" method="POST" action="add.php" enctype="multipart/form-data">
                       <div class="form-group">
                           <label for="connection" class="col-md-4 control-label">database connection (eg mysql)?</label>
                           <div class="col-md-6">
