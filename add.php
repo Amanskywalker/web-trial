@@ -8,13 +8,14 @@
   $username=$_POST['username'];
   $password=$_POST['password'];
 
-  $data = "
-    \$db_connection=\"$connection\"
-    \$db_host=\"$host\"
-    \$db_port=\"$port\"
-    \$db_database=\"$dbname\"
-    \$db_username=\"$username\"
-    \$db_password=\"$password\"";
+  $data = "\n<?php
+  \$db_connection=\"$connection\";
+  \$db_host=\"$host\";
+  \$db_port=\"$port\";
+  \$db_database=\"$dbname\";
+  \$db_username=\"$username\";
+  \$db_password=\"$password\";
+?>";
 
   $my_file = 'config.php';
   $handle = fopen($my_file, 'w+') or die('Cannot open file:  '.$my_file);
@@ -23,5 +24,5 @@
 
   if ($debug)
       echo "data written to the file";
-  //header('Location: index.php');
+  header('Location: index.php');
 ?>
