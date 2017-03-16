@@ -24,7 +24,7 @@
                 </ul>
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="rest.php">Reset Current setting</a></li>
+                  <li><a href="reset.php">Reset Current setting</a></li>
                 </ul>
             </div>
         </div>
