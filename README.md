@@ -1,7 +1,7 @@
 # php-filehandling
 
 A demonstration using PHP to write a config file (config.php in this case) and use the same config file for further purpose.
-For the front-end bootstrap is used.
+For the front-end bootstrap is used (via cdns network so no css files are included).
 
 ## Repository Structure
 .   
