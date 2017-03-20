@@ -38,7 +38,7 @@ Just of testing purpose a demo instance can be found at [67.205.166.101](http://
   - `sudo apt-get install php7.0` for Ubuntu/Debian users
 1. Clone this repository `git clone https://github.com/Amanskywalker/php-filehandling.git`
 1. `cd php-filehandling\`
-1. Use `php -S localhost:8900` to host the localserver
+1. Use `php -S localhost:8900` to host it on localserver developement server
 1. Open you browser and Visit `localhost:8900\index.php`
 
 ## Contribution
