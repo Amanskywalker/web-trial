@@ -30,7 +30,7 @@ reset.php : The script to reset the config file.
 
 ## Live instance
 
-Just of testing purpose a demo instance can be found at <ip>
+Just of testing purpose a demo instance can be found at [67.205.166.101](http://67.205.166.101/)
 
 ## How to Run this?
 
