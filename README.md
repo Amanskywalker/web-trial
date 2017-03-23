@@ -30,7 +30,7 @@ reset.php : The script to reset the config file.
 
 ## Live instance
 
-All Demo instance are down currently
+All Demo instance are currently down
 
 ## How to Run this?
 
