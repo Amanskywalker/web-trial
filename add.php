@@ -1,25 +1,17 @@
 <?php
   include 'core.php';
 // catch all the input fields
-  $connection=$_POST['connection'];
-  $host=$_POST['host'];
-  $port=$_POST['port'];
-  $dbname=$_POST['name'];
-  $username=$_POST['username'];
-  $password=$_POST['password'];
+  $coordinatesString=$_POST['coordinates'];
+  $dataToWrite = "";
 
-  $data = "\n<?php
-  \$db_connection=\"$connection\";
-  \$db_host=\"$host\";
-  \$db_port=\"$port\";
-  \$db_database=\"$dbname\";
-  \$db_username=\"$username\";
-  \$db_password=\"$password\";
-?>";
+  $coordinatesArray = explode(";",$coordinatesString);
 
-  $my_file = 'config.php';
+  foreach ($coordinatesArray as $key => $value) {
+    $dataToWrite = $dataToWrite.$value."\n";
+  }
+
   $handle = fopen($my_file, 'w+') or die('Cannot open file:  '.$my_file);
-  fwrite($handle, $data);
+  fwrite($handle, $dataToWrite);
   fclose($handle);
 
   if ($debug)

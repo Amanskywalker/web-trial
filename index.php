@@ -4,33 +4,26 @@
   include 'core.php';
   include 'head.part.php';
   include 'nav.part.php';
-  if (file_exists ("config.php"))
+  if (file_exists ($my_file))
   {
 ?>
   <div class="container">
       <div class="row">
           <div class="col-md-8 col-md-offset-2">
               <div class="panel panel-default">
-                  <div class="panel-heading">Let me checkout what happned</div>
+                  <div class="panel-heading">Content of <?php echo "$my_file";?></div>
                     <div class="panel-body">
                     <?php
-                      include 'config.php';
-                      if ($db_connection=="mysql")
-                      {
-                        try
-                        {
-                          $conn = new PDO("${db_connection}:host=${db_host};dbname=${db_database}", $db_username, $db_password);
-                          $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                          echo "Connected successfully";
-                        }
-                        catch(PDOException $e)
-                        {
-                          echo "Something wrong :(</br>Connection failed: " . $e->getMessage()."<br><br>You can use the reset button to reset the settings and try agin.";
-                        }
-                      }
-                      else
-                        echo "connection other than mysql not supported for now";
-                      ?>
+                    $handle = fopen($my_file, 'r+') or die('Cannot open file:  '.$my_file);
+                    $contents = fread($handle, filesize($my_file));
+                    fclose($handle);
+
+                    $contentsArray = explode("\n",$contents);
+
+                    foreach ($contentsArray as $key => $value) {
+                      echo "$value <br>";
+                    }
+                    ?>
                     </div>
               </div>
           </div>
@@ -38,9 +31,6 @@
   </div>
 <?php
   }
-  else
-  {
-    include 'fill.form.php';
-  }
+  include 'fill.form.php';
   include 'footer.part.php';
  ?>

@@ -8,8 +8,11 @@ date_default_timezone_set('Asia/Kolkata');
 // for debuging
 	$debug=true;
 
-// redirectors 
+// redirectors
 $current_file=@$_SERVER['SCRIPT_NAME'];
 $http_referer=@$_SERVER['HTTP_REFERER'];
+
+// file details
+$my_file = 'coordiantes.txt';
 
 ?>
