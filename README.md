@@ -4,17 +4,17 @@ A demonstration using PHP to write a config file (config.php in this case) and u
 For the front-end bootstrap is used (via cdns network so no css files are included).
 
 ## Repository Structure
-.   
-|-- add.php     
-|-- core.php    
-|-- fill.form.php    
-|-- footer.part.php   
-|-- head.part.php   
-|-- index.php   
-|-- LICENSE   
-|-- nav.part.php    
-|-- README.md   
-'-- reset.php   
+. 
+|-- add.php 
+|-- core.php 
+|-- fill.form.php 
+|-- footer.part.php 
+|-- head.part.php 
+|-- index.php 
+|-- LICENSE 
+|-- nav.part.php 
+|-- README.md 
+'-- reset.php
 
 All the .part.php files are the reusable html code which are used to construct the web page
 

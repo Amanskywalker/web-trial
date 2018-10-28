@@ -18,7 +18,7 @@
                     $contents = fread($handle, filesize($my_file));
                     fclose($handle);
 
-                    $contentsArray = explode("\n",$contents);
+                    $contentsArray = explode(";",$contents);
 
                     foreach ($contentsArray as $key => $value) {
                       echo "$value <br>";
